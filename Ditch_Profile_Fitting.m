@@ -8,7 +8,7 @@ clc
 clear
 close all
 %% Load the filtered and projected point cloud
-filename='C:\Users\Gebruiker\OneDrive - KU Leuven\school\Thesis\Data and scripts\Airborne data\LidarpointspercrosssectioninDecember2D.txt'; %other laptop
+filename='C:\Users\Gebruiker\OneDrive - KU Leuven\school\Thesis\Data and scripts\Airborne data\LidarpointspercrosssectioninDecember2D.txt'; 
 fileID = fopen(filename, 'r');
 transectData = [];
 currentTransect = 0;
