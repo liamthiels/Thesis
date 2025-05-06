@@ -3,10 +3,12 @@ The two scripts will together extract and fit the cross-sections of agricultural
 Step 1: Python file
 This scripts needs three inputs: 
 
-- An excell file that contains all the 2D coordinates of the endpoints of the different cross-sections you want to extract. The excel should look like this:
+- An excel file that contains all the 2D coordinates of the endpoints of the different cross-sections you want to extract. The excel should look like this:
 
   id      X      Y
+  
   1      20.42   4.37
+  
   1      20.43   4.36
   2      18.63   5.91
   2      18.63   5.96
