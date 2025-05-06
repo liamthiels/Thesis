@@ -13,15 +13,15 @@ import numpy as np
 #USER INPUT FILES AND PARAMETERS ------------------------------------------------------------------
 
 #This excel needs to have three columns: column 1 "id" is the id of the cross-section, this should have the id for the start and end coordinate. 
-#Column 2 "X" and column 3 "Y" needs to contain the X and Y coordinates of the endpoints. So the first row needs tp have number 1 in the first column 
+#Column 2 "X" and column 3 "Y" needs to contain the X and Y coordinates of the endpoints. So the first row needs to have number 1 in the first column 
 #and then the coordinates of the startpoint in column 2 and 3. The second row also needs to have number 1 in the first column and than the coordinates of 
 #the endpoint and so forth for all the cross-sections that need to be generated.
 
-Coordinates_path='C:/Users/gebruiker/OneDrive - KU Leuven/school/Thesis/Data and scripts/cross-sectie uiteinden.xlsx' 
+Coordinates_path='C:/Users/gebruiker/OneDrive - KU Leuven/school/Thesis/Data and scripts/cross-sectie uiteinden.xlsx' #.xlsx file
 
 #Ideally, the las file has already been clipped to only the area of importance to speed up the processing time.
 
-las_file_path= 'C:/Users/gebruiker/OneDrive - KU Leuven/school/Thesis/Data and scripts/UAVLiDAR_measurements/20241203_Kasterlee_ditches.las'
+las_file_path= 'C:/Users/gebruiker/OneDrive - KU Leuven/school/Thesis/Data and scripts/UAVLiDAR_measurements/20241203_Kasterlee_ditches.las' #.las file
 
 Bufferwidth=0.35 #This can still be changed to obtain smaller or wider buffer zones
 
@@ -116,7 +116,7 @@ np.savetxt('C:/Users/gebruiker/OneDrive - KU Leuven/school/Thesis/Data and scrip
 #%% Reading the filteredpoints 
 filtered_file_path = 'C:/Users/gebruiker/OneDrive - KU Leuven/school/Thesis/Data and scripts/UAVLiDAR_measurements/filteredpointsDecember.txt'
 
-# Initialize an empty list to store the tuples
+# Initialize an empty list 
 filteredpoints = []
 
 # Open the file and process line by line
@@ -127,7 +127,7 @@ with open(filtered_file_path, 'r') as file:
         filteredpoints.append((x, y, z, b, g, r, I, gps, a, C))
 
 
-#This function projects all the points perpendicularly ontp the cross-sectional plane
+#This function projects all the points perpendicularly onto the cross-sectional plane
 def project_points_onto_transects(Endpoints, filtered_points):
     projected_points = []
 
